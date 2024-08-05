@@ -11,7 +11,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  /* width: 60%; */
   margin-left: 6rem;
   background-color: #07042d;
   color: #f4fff1;
@@ -64,28 +64,34 @@ a:hover {
   color: #f4fff1;
 }
 
-.container {
-  display: flex;
-}
-
 .projects-container {
-  justify-content: space-between;
-  max-width: 70rem;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
+  gap: 4rem;
+  /* width: 70rem; */
 }
 
 .project {
   display: flex;
   flex-flow: column;
+  flex: 1 0 20rem; /* flex-grow: 1, flex-shrink: 1, flex-basis: 20rem */
   max-width: 20rem;
 }
 
 .project img {
+  width: 100%;
+}
+
+/* .project img {
   width: 20rem;
   height: 11rem;
-}
+} */
 
 .skills-container {
   display: flex;
+  flex-flow: wrap;
+  margin-top: 1rem;
   /* justify-content: space-between; */
   /* max-width: 24rem; */
 }
@@ -94,7 +100,8 @@ a:hover {
   display: flex;
   /* justify-content: space-between; */
   align-items: center;
-  width: 12rem;
+  flex: 1 1 12rem;
+  max-width: 12rem;
 }
 
 .icon-container {
@@ -113,6 +120,13 @@ a:hover {
 }
 
 .contact-container {
+  display: flex;
   justify-content: space-between;
   max-width: 16rem;
 }
+
+/* @media screen and (max-width: 82rem) {
+  .projects-container {
+    width: 50rem;
+  }
+} */
